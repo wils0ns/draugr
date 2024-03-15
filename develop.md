@@ -18,3 +18,18 @@
 ```bash
 go install github.com/a-h/templ/cmd/templ@latest
 ```
+
+## Tailwind
+
+* [nvm](https://github.com/nvm-sh/nvm)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [daisyui](https://daisyui.com/)
+
+## HTMX
+
+* [htmx](https://htmx.org/)
+
+## Font Awesome
+
+* [Font Awesome](https://fontawesome.com/)
+* [cdnjs](https://cdnjs.com/libraries/font-awesome)

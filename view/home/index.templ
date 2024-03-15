@@ -1,5 +1,9 @@
 package home
 
-templ Index(){
-    <div>test</div>
+import "sentryeye/view/layout"
+
+templ Index() {
+	@layout.App(true) {
+		<div>test</div>
+	}
 }

@@ -1,15 +1,20 @@
 package main
 
 import (
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
-	"github.com/go-chi/httplog/v2"
+	"embed"
 	"log"
 	"log/slog"
 	"net/http"
 	"os"
 	"sentryeye/handler"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/httplog/v2"
 )
+
+//go:embed public
+var FS embed.FS
 
 func main() {
 	// Config
@@ -23,6 +28,7 @@ func main() {
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Heartbeat("/livez"))
 
+	r.Handle("/*", http.StripPrefix("/", http.FileServer(http.FS(FS))))
 	r.Get("/", handler.MakeHandler(handler.HandleHomeIndex))
 
 	slog.Info("Starting SentryEye", "port", port)
