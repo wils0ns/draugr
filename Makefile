@@ -1,5 +1,5 @@
 run: build
-	@./bin/sentryeye
+	@./bin/draugr
 
 day1:
 	@npm install -D tailwindcss
@@ -14,4 +14,4 @@ install:
 build:
 	@npx tailwindcss -i view/css/app.css -o public/app.css
 	@templ generate view
-	@go build -o bin/sentryeye
+	@go build -o bin/draugr

@@ -1,12 +1,12 @@
 package main
 
 import (
+	"draugr/handler"
 	"embed"
 	"log"
 	"log/slog"
 	"net/http"
 	"os"
-	"sentryeye/handler"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
@@ -31,6 +31,6 @@ func main() {
 	r.Handle("/*", http.StripPrefix("/", http.FileServer(http.FS(FS))))
 	r.Get("/", handler.MakeHandler(handler.HandleHomeIndex))
 
-	slog.Info("Starting SentryEye", "port", port)
+	slog.Info("Starting draugr", "port", port)
 	log.Fatal(http.ListenAndServe(port, r))
 }

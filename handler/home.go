@@ -1,8 +1,8 @@
 package handler
 
 import (
+	"draugr/view/home"
 	"net/http"
-	"sentryeye/view/home"
 )
 
 func HandleHomeIndex(w http.ResponseWriter, r *http.Request) error {
