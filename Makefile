@@ -1,3 +1,6 @@
+air:
+	@air
+
 run: build
 	@./bin/draugr
 
