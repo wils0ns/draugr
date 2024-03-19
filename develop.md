@@ -33,3 +33,7 @@ go install github.com/a-h/templ/cmd/templ@latest
 
 * [Font Awesome](https://fontawesome.com/)
 * [cdnjs](https://cdnjs.com/libraries/font-awesome)
+
+## Air
+
+* [Air](https://github.com/cosmtrek/air)
