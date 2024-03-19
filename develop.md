@@ -13,7 +13,7 @@
 * [templ](https://github.com/a-h/templ)
 * [templ guide](https://templ.guide/)
 
-### Install
+Install:
 
 ```bash
 go install github.com/a-h/templ/cmd/templ@latest
@@ -24,6 +24,20 @@ go install github.com/a-h/templ/cmd/templ@latest
 * [nvm](https://github.com/nvm-sh/nvm)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [daisyui](https://daisyui.com/)
+
+Configure tailwind vscode extension:
+
+```json
+"tailwindCSS.includeLanguages": {
+    "templ": "gohtmltmpl"
+},
+"files.associations": {
+    "*.css": "tailwindcss"
+},
+"editor.quickSuggestions": {
+    "strings": "on"
+}
+```
 
 ## HTMX
 
