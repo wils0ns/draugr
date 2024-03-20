@@ -4,7 +4,7 @@ import "draugr/view/ui"
 
 templ App(nav bool) {
 	<!DOCTYPE html>
-	<html lang="en" data-theme="light">
+	<html lang="en" data-theme="dim">
 		<head>
 			<title>draugr</title>
 			<meta charset="UTF-8"/>
@@ -15,10 +15,22 @@ templ App(nav bool) {
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 		</head>
 		<body>
-			if nav {
-				@ui.Nav()
-			}
-			{ children... }
+			<div class="fixed left-0 top-0 z-50 w-full">
+				<div class="flex h-screen flex-col">
+					<div class="flex-grow overflow-auto">
+						<div class="flex h-full">
+							<div class="flex-shrink-0 w-56 lg:flex py-3">
+								if nav {
+									@ui.Nav()
+								}
+							</div>
+							<section class="relative mx-auto w-full max-w-200 overflow-auto py-3">
+								{ children... }
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
 		</body>
 	</html>
 }
