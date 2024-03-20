@@ -671,6 +671,72 @@ html {
   --er: 0.824189 0.09957 33.756357;
 }
 
+[data-theme=business] {
+  color-scheme: dark;
+  --b2: 0.226487 0 0;
+  --b3: 0.20944 0 0;
+  --bc: 0.848707 0 0;
+  --pc: 0.883407 0.019811 251.473931;
+  --sc: 0.128185 0.005481 229.389418;
+  --ac: 0.134542 0.033545 35.791525;
+  --nc: 0.854882 0.00265 253.041249;
+  --inc: 0.125233 0.028702 240.033697;
+  --suc: 0.140454 0.018919 156.59611;
+  --wac: 0.154965 0.023141 81.519177;
+  --erc: 0.903221 0.029356 29.674507;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 0.417036 0.099057 251.473931;
+  --s: 0.640924 0.027405 229.389418;
+  --a: 0.67271 0.167726 35.791525;
+  --n: 0.27441 0.01325 253.041249;
+  --b1: 0.243535 0 0;
+  --in: 0.626163 0.143511 240.033697;
+  --su: 0.702268 0.094594 156.59611;
+  --wa: 0.774824 0.115704 81.519177;
+  --er: 0.516105 0.14678 29.674507;
+  --rounded-box: 0.25rem;
+  --rounded-btn: .125rem;
+  --rounded-badge: .125rem;
+}
+
+:root:has(input.theme-controller[value=business]:checked) {
+  color-scheme: dark;
+  --b2: 0.226487 0 0;
+  --b3: 0.20944 0 0;
+  --bc: 0.848707 0 0;
+  --pc: 0.883407 0.019811 251.473931;
+  --sc: 0.128185 0.005481 229.389418;
+  --ac: 0.134542 0.033545 35.791525;
+  --nc: 0.854882 0.00265 253.041249;
+  --inc: 0.125233 0.028702 240.033697;
+  --suc: 0.140454 0.018919 156.59611;
+  --wac: 0.154965 0.023141 81.519177;
+  --erc: 0.903221 0.029356 29.674507;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 0.417036 0.099057 251.473931;
+  --s: 0.640924 0.027405 229.389418;
+  --a: 0.67271 0.167726 35.791525;
+  --n: 0.27441 0.01325 253.041249;
+  --b1: 0.243535 0 0;
+  --in: 0.626163 0.143511 240.033697;
+  --su: 0.702268 0.094594 156.59611;
+  --wa: 0.774824 0.115704 81.519177;
+  --er: 0.516105 0.14678 29.674507;
+  --rounded-box: 0.25rem;
+  --rounded-btn: .125rem;
+  --rounded-badge: .125rem;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1306,13 +1372,60 @@ html {
   border-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-border-opacity)));
 }
 
-.badge-ghost {
+.badge-secondary {
   --tw-border-opacity: 1;
-  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+  border-color: var(--fallback-s,oklch(var(--s)/var(--tw-border-opacity)));
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
   --tw-text-opacity: 1;
-  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+  color: var(--fallback-sc,oklch(var(--sc)/var(--tw-text-opacity)));
+}
+
+.badge-outline {
+  border-color: currentColor;
+  --tw-border-opacity: 0.5;
+  background-color: transparent;
+  color: currentColor;
+}
+
+.badge-outline.badge-neutral {
+  --tw-text-opacity: 1;
+  color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-primary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-secondary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-accent {
+  --tw-text-opacity: 1;
+  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-info {
+  --tw-text-opacity: 1;
+  color: var(--fallback-in,oklch(var(--in)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-success {
+  --tw-text-opacity: 1;
+  color: var(--fallback-su,oklch(var(--su)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-warning {
+  --tw-text-opacity: 1;
+  color: var(--fallback-wa,oklch(var(--wa)/var(--tw-text-opacity)));
+}
+
+.badge-outline.badge-error {
+  --tw-text-opacity: 1;
+  color: var(--fallback-er,oklch(var(--er)/var(--tw-text-opacity)));
 }
 
 .btm-nav > * .label {
@@ -1841,9 +1954,9 @@ html {
   padding: 0px;
 }
 
-[type="checkbox"].checkbox-sm {
-  height: 1.25rem;
-  width: 1.25rem;
+[type="checkbox"].checkbox-xs {
+  height: 1rem;
+  width: 1rem;
 }
 
 .avatar.online:before {
@@ -2050,14 +2163,14 @@ html {
   padding-top: 0.5rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-sm {
@@ -2067,6 +2180,10 @@ html {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .opacity-50 {
