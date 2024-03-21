@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dim", "business"]
-  }
+    themes: ["lofi", "business"]
+  },
+  darkMode: ['selector', '[data-theme="business"]']
 }
